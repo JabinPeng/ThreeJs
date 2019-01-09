@@ -28,3 +28,5 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+gltf 文件 需要特殊处理一下 在本地运行 需要node 启动一个服务 把路径配好把相应的gltf放在一个文件夹中 直接引入
