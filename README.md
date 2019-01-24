@@ -32,3 +32,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 gltf 文件 需要特殊处理一下 在本地运行 需要node 启动一个服务 把路径配好把相应的gltf放在一个文件夹中 直接引入
 
 整个threejs项目基于VUE框架NPM下载依赖包  npm install
+1
