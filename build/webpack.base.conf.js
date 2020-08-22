@@ -3,7 +3,6 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-const improtThreeExamples = require('improt-three-examples')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -86,31 +85,30 @@ module.exports = {
         test: /bower_components\/EaselJS\/.*\.js$/,
         loader: 'imports?this=>window!exports?window.createjs'
       },
-      ...improtThreeExamples
-      // {
-      //   test: require.resolve("three/examples/js/controls/OrbitControls"),
-      //   use: "imports-loader?THREE=three"
-      // },
-      // {
-      //   test: require.resolve("three/examples/js/controls/OrbitControls"),
-      //   use: "exports-loader?THREE.OrbitControls"
-      // },
-      // {
-      //   test: require.resolve("three/examples/js/loaders/FBXLoader"),
-      //   use: "imports-loader?THREE=three"
-      // },
-      // {
-      //   test: require.resolve("three/examples/js/loaders/FBXLoader"),
-      //   use: "exports-loader?THREE.FBXLoader"
-      // },
-      // {
-      //   test: require.resolve("three/examples/js/loaders/GLTFLoader"),
-      //   use: "imports-loader?THREE=three"
-      // },
-      // {
-      //   test: require.resolve("three/examples/js/loaders/GLTFLoader"),
-      //   use: "exports-loader?THREE.GLTFLoader"
-      // }
+      {
+        test: require.resolve("three/examples/js/controls/OrbitControls"),
+        use: "imports-loader?THREE=three"
+      },
+      {
+        test: require.resolve("three/examples/js/controls/OrbitControls"),
+        use: "exports-loader?THREE.OrbitControls"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/FBXLoader"),
+        use: "imports-loader?THREE=three"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/FBXLoader"),
+        use: "exports-loader?THREE.FBXLoader"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "imports-loader?THREE=three"
+      },
+      {
+        test: require.resolve("three/examples/js/loaders/GLTFLoader"),
+        use: "exports-loader?THREE.GLTFLoader"
+      }
     ]
   },
   node: {

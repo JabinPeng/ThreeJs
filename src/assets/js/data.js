@@ -69,6 +69,154 @@ let Aobjects = {
           }
         }
       },
+      {
+          show: true,
+          uuid: "",
+          name: 'HighLowBed',
+          objType: 'cube',
+          rotation: [{ direction: 'y', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 200,
+          y: 50,
+          z: 1300,
+          length: 200,
+          width: 260,
+          height: 50,
+          transparent: true,
+          opacity: 1,
+          style: {
+              skinColor: 0x8ac9e2,
+              skin: {
+                  skin_up: {
+                      imgurl: bedtop2,
+                  },
+                  skin_fore: {
+                      imgurl: bedRight,
+                  },
+                  skin_left: {
+                      imgurl: bedRight
+                  },
+                  skin_behind: {
+                      imgurl: bedRight
+                  }
+              }
+          }
+      },
+      {
+          show: true,
+          uuid: "",
+          name: 'HighLowBed',
+          objType: 'cube',
+          rotation: [{ direction: 'y', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 200,
+          y: 200,
+          z: 1300,
+          length: 200,
+          width: 260,
+          height: 50,
+          transparent: true,
+          opacity: 1,
+          style: {
+              skinColor: 0x8ac9e2,
+              skin: {
+                  skin_up: {
+                      imgurl: bedtop2,
+                  },
+                  skin_fore: {
+                      imgurl: bedRight,
+                  },
+                  skin_left: {
+                      imgurl: bedRight
+                  },
+                  skin_behind: {
+                      imgurl: bedRight
+                  }
+              }
+          }
+      },
+      {
+          show: true,
+          uuid: "",
+          name: 'pillar',
+          objType: 'Cylinder',
+          rotation: [{ direction: 'x', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 300,
+          y: 150,
+          z: 1420,
+          length: 280,  //高
+          width:5,
+          height:5,
+          style: {
+              skinColor: 0x808080,
+              skin: {
+                  skin_down: {
+                      imgurl: yangan,
+                  },
+              }
+          }
+      },
+      {
+          show: true,
+          uuid: "",
+          name: 'pillar',
+          objType: 'Cylinder',
+          rotation: [{ direction: 'x', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 100,
+          y: 150,
+          z: 1420,
+          length: 280,  //高
+          width:5,
+          height:5,
+          style: {
+              skinColor: 0x808080,
+              skin: {
+                  skin_down: {
+                      imgurl: yangan,
+                  },
+              }
+          }
+      },
+      {
+          show: true,
+          uuid: "",
+          name: 'pillar',
+          objType: 'Cylinder',
+          rotation: [{ direction: 'x', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 300,
+          y: 150,
+          z: 1200,
+          length: 280,  //高
+          width:5,
+          height:5,
+          style: {
+              skinColor: 0x808080,
+              skin: {
+                  skin_down: {
+                      imgurl: yangan,
+                  },
+              }
+          }
+      },
+      {
+          show: true,
+          uuid: "",
+          name: 'pillar',
+          objType: 'Cylinder',
+          rotation: [{ direction: 'x', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+          x: 100,
+          y: 150,
+          z: 1200,
+          length: 280,  //高
+          width:5,
+          height:5,
+          style: {
+              skinColor: 0x808080,
+              skin: {
+                  skin_down: {
+                      imgurl: yangan,
+                  },
+              }
+          }
+      },
       // 楼栋图
       // {
       //   show: true,
@@ -1716,21 +1864,21 @@ let Aobjects = {
         url: '/obj/comput/scene.gltf'
       },
     //gltf A2墙
-    // {
-    //   show: true,
-    //   uuid: "",
-    //   name: 'A2',
-    //   objType: 'gltfObj',
-    //   rotation: [{ direction: 'y', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
-    //   x: -1650,
-    //   y: 2000,
-    //   z: 2400,
-    //   rx: 0,
-    //   ry: 0,
-    //   rz:0,
-    //   scale: 0.1,
-    //   url: A2
-    // },
+    {
+      show: true,
+      uuid: "",
+      name: 'A2',
+      objType: 'gltfObj',
+      rotation: [{ direction: 'y', degree: 0 }],//旋转 表示x方向0度  arb表示任意参数值[x,y,z,angle]
+      x: -1650,
+      y: 2000,
+      z: 2400,
+      rx: 0,
+      ry: 0,
+      rz:0,
+      scale: 0.1,
+      url: A2
+    },
     // 文字
     // {
     //   name: '',
@@ -1905,148 +2053,148 @@ let Aobjects = {
       {
         findObject: function(_objname){
           console.log(_objname)
-  if (_objname.indexOf("Box001_01_-_Default_0") >= 0) {
-  return true;
-} else {
-  return false;
-}
-},
-obj_uuid: "",
-  obj_event: function (_obj, that) {
-  console.log(_obj, that)
-  that.isFlag.dataFlag = !that.isFlag.dataFlag
-  var vector = new THREE.Vector3();
-  vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
-  var halfWidth = window.innerWidth / 2;
-  var halfHeight = window.innerHeight / 2;
-  var result = {
-    x: Math.round(vector.x * halfWidth + halfWidth),
-    y: Math.round(-vector.y * halfHeight + halfHeight)
-  };
-  console.log(result)
-  let storeyId =  formate(window.location.search)
-  console.log(storeyId)
-  that.isFlag.X = result.x
-  that.isFlag.Y = result.y
-  that.isFlag.facility = storeyId + '楼电脑显示器'
-  that.isFlag.message = '24寸液晶显示器 品牌 三星'
-}
-},
-{
-  findObject:function(_objname){//查找某一类符合名称的对象
-    if (_objname.indexOf("smokeDetector") >= 0) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  obj_uuid: "",
-    obj_event: function (_obj, that) {
-  console.log(_obj, that)
-  that.isFlag.dataFlag = !that.isFlag.dataFlag
-  var vector = new THREE.Vector3();
-  vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
-  var halfWidth = window.innerWidth / 2;
-  var halfHeight = window.innerHeight / 2;
-  var result = {
-    x: Math.round(vector.x * halfWidth + halfWidth),
-    y: Math.round(-vector.y * halfHeight + halfHeight)
-  };
-  console.log(result)
-  let storeyId =  formate(window.location.search)
-  console.log(storeyId)
-  that.isFlag.X = result.x
-  that.isFlag.Y = result.y
-  that.isFlag.facility = storeyId + '楼烟感'
-  that.isFlag.message = '运行状况正常'
-}
-},
-{
-  findObject:function(_objname){//查找某一类符合名称的对象
-    if (_objname.indexOf("Bed") >= 0) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  obj_uuid: "",
-    obj_event: function (_obj, that) {
-  console.log(_obj, that)
-  that.isFlag.dataFlag = !that.isFlag.dataFlag
-  var vector = new THREE.Vector3();
-  vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
-  var halfWidth = window.innerWidth / 2;
-  var halfHeight = window.innerHeight / 2;
-  var result = {
-    x: Math.round(vector.x * halfWidth + halfWidth),
-    y: Math.round(-vector.y * halfHeight + halfHeight)
-  };
-  let storeyId =  formate(window.location.search)
-  console.log(storeyId)
-  that.isFlag.X = result.x
-  that.isFlag.Y = result.y
-  that.isFlag.facility = storeyId + '楼' + storeyId + '01'
-  that.isFlag.message = '租户: 朱俪雯 '+ storeyId +'01-1号床'
-}
-},
-{
-  findObject:function(_objname){//查找某一类符合名称的对象
-    if (_objname.indexOf("cabinet") >= 0 && _objname.indexOf("door") >= 0) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  obj_uuid: "",
-    obj_event: function (_obj) {
-  opcabinetdoor(_obj);
-}
-},
-{
-  findObject: function (_objname) {//查找某一类符合名称的对象
-    if (_objname.indexOf("equipment") >= 0 && _objname.indexOf("card") >= 0) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  obj_uuid: "",
-    obj_event: function (_obj) {
-  var cardstate = "in";
-  if (_obj.cardstate != null && typeof (_obj.cardstate) != 'undefined') {
-    cardstate = _obj.cardstate;
-  } else {
-    _obj.cardstate = "out";
-  }
-  new createjs.Tween(_obj.position).to({
-    x: (cardstate == "in" ? _obj.position.x - 50 : _obj.position.x + 50),
-  }, 1000,createjs.Ease.linear).call(function () { _obj.cardstate = cardstate == "in" ? "out" : "in"; });
-}
-}
-],
-mouseDown: [
-
-],
-  mouseUp: {
-},
-mouseMove: [
-  {
-    findObject:function(_objname){//查找某一类符合名称的对象
-      if (_objname.indexOf("wall3") >= 0) {
-        return true;
-      } else {
-        return false;
+          if (_objname.indexOf("Box001_01_-_Default_0") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj, that) {
+          console.log(_obj, that)
+          that.isFlag.dataFlag = !that.isFlag.dataFlag
+          var vector = new THREE.Vector3();
+          vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
+          var halfWidth = window.innerWidth / 2;
+          var halfHeight = window.innerHeight / 2;
+          var result = {
+            x: Math.round(vector.x * halfWidth + halfWidth),
+            y: Math.round(-vector.y * halfHeight + halfHeight)
+          };
+          console.log(result)
+          let storeyId =  formate(window.location.search)
+          console.log(storeyId)
+          that.isFlag.X = result.x
+          that.isFlag.Y = result.y
+          that.isFlag.facility = storeyId + '楼电脑显示器'
+          that.isFlag.message = '24寸液晶显示器 品牌 三星'
+        }
+      },
+      {
+        findObject:function(_objname){//查找某一类符合名称的对象
+          if (_objname.indexOf("smokeDetector") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj, that) {
+          console.log(_obj, that)
+          that.isFlag.dataFlag = !that.isFlag.dataFlag
+          var vector = new THREE.Vector3();
+          vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
+          var halfWidth = window.innerWidth / 2;
+          var halfHeight = window.innerHeight / 2;
+          var result = {
+            x: Math.round(vector.x * halfWidth + halfWidth),
+            y: Math.round(-vector.y * halfHeight + halfHeight)
+          };
+          console.log(result)
+         let storeyId =  formate(window.location.search)
+          console.log(storeyId)
+          that.isFlag.X = result.x
+          that.isFlag.Y = result.y
+          that.isFlag.facility = storeyId + '楼烟感'
+          that.isFlag.message = '运行状况正常'
+        }
+      },
+      {
+        findObject:function(_objname){//查找某一类符合名称的对象
+          if (_objname.indexOf("Bed") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj, that) {
+          console.log(_obj, that)
+          that.isFlag.dataFlag = !that.isFlag.dataFlag
+          var vector = new THREE.Vector3();
+          vector = vector.setFromMatrixPosition(_obj.matrixWorld).project(that.camera);
+          var halfWidth = window.innerWidth / 2;
+          var halfHeight = window.innerHeight / 2;
+          var result = {
+            x: Math.round(vector.x * halfWidth + halfWidth),
+            y: Math.round(-vector.y * halfHeight + halfHeight)
+          };
+          let storeyId =  formate(window.location.search)
+          console.log(storeyId)
+          that.isFlag.X = result.x
+          that.isFlag.Y = result.y
+          that.isFlag.facility = storeyId + '楼' + storeyId + '01'
+          that.isFlag.message = '租户: 朱俪雯 '+ storeyId +'01-1号床'
+        }
+      },
+      {
+        findObject:function(_objname){//查找某一类符合名称的对象
+          if (_objname.indexOf("cabinet") >= 0 && _objname.indexOf("door") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj) {
+          opcabinetdoor(_obj);
+        }
+      },
+      {
+        findObject: function (_objname) {//查找某一类符合名称的对象
+          if (_objname.indexOf("equipment") >= 0 && _objname.indexOf("card") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj) {
+          var cardstate = "in";
+          if (_obj.cardstate != null && typeof (_obj.cardstate) != 'undefined') {
+            cardstate = _obj.cardstate;
+          } else {
+            _obj.cardstate = "out";
+          }
+          new createjs.Tween(_obj.position).to({
+            x: (cardstate == "in" ? _obj.position.x - 50 : _obj.position.x + 50),
+          }, 1000,createjs.Ease.linear).call(function () { _obj.cardstate = cardstate == "in" ? "out" : "in"; });
+        }
       }
+    ],
+    mouseDown: [
+
+    ],
+    mouseUp: {
     },
-    obj_uuid: "",
-    obj_event: function (_obj) {
-      console.log(_obj)
-    }
-  }
-],
-  mouseOut: [
-]
-},
+    mouseMove: [
+      {
+        findObject:function(_objname){//查找某一类符合名称的对象
+          if (_objname.indexOf("wall3") >= 0) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        obj_uuid: "",
+        obj_event: function (_obj) {
+          console.log(_obj)
+        }
+      }
+    ],
+    mouseOut: [
+    ]
+  },
   btns: [
     {
       btnid: "btn_reset",
@@ -2088,6 +2236,7 @@ mouseMove: [
         new createjs.Tween(mainCamera.position).to({
           x:-300, y:200, z:-700,
         }, 5000,createjs.Ease.linear).call(function () {
+
           openRightDoor(msj3DObj.commonFunc.findObject("doorRight"), function () {
             var cabinet3_1 = msj3DObj.commonFunc.findObject("cabinet3_1");
             mainCamera.lookAt(cabinet3_1.position);

@@ -288,20 +288,20 @@ export class remap3D {
   // text
   initText (_obj) {
     var _this =  this
-    var particleMaterial = new THREE.SpriteCanvasMaterial( {
-      color: 0x000000,
-      program: function ( context ) {
-        context.beginPath();
-        context.font="bold 100px Arial";
-        context.fillStyle="#058";
-        context.transform(-1,0,0,1,0,0);
-        context.rotate(Math.PI);
-        context.fillText( _obj.wordFont , 0, 0 );
-      }
-    })
-    var particle = new THREE.Sprite(particleMaterial)
-    particle.rotation.x = Math.PI/2;
-    _this.scene.add(particle)
+    // var particleMaterial = new THREE.SpriteCanvasMaterial( {
+    //   color: 0x000000,
+    //   program: function ( context ) {
+    //     context.beginPath();
+    //     context.font="bold 100px Arial";
+    //     context.fillStyle="#058";
+    //     context.transform(-1,0,0,1,0,0);
+    //     context.rotate(Math.PI);
+    //     context.fillText( _obj.wordFont , 0, 0 );
+    //   }
+    // })
+    // var particle = new THREE.Sprite(particleMaterial)
+    // particle.rotation.x = Math.PI/2;
+    // _this.scene.add(particle)
   }
   //gltf
   addGltfObj (_obj) {
