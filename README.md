@@ -1,8 +1,8 @@
 # vue-three
 
-> A Vue.js project
+模型加载可以用ssr 或者cdn加速 本地使用node服务调用模型
 
-## Build Setup
+本地模型包在nodeServes.rar中 安装node环境运行
 
 ``` bash
 # install dependencies
@@ -27,4 +27,3 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
