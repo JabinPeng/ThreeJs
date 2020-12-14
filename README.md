@@ -27,4 +27,4 @@ npm run e2e
 npm test
 ```
 因为3D项目比较大 最近有个新的3D项目思路
-可以把threejs部分用iframe进行嵌套展示
+可以把threejs部分用iframe进行嵌套展示 目前3D项目比较大 加载性能可能是最大的问题
