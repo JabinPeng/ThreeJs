@@ -7,7 +7,13 @@
 >npm或者cnpm 安装依赖 start启动项目就可以了
 
 因为3D项目比较大 最近有个新的3D项目思路
+
+
 可以把threejs部分用iframe进行嵌套展示 目前3D项目比较大 加载性能可能是最大的问题。
-项目因为模型原因，比较大，后期考虑上传至云盘开放下载
-参考项目：https://github.com/JabinPeng/ThreeWeb
+
+
+项目因为模型原因，比较大，后期考虑上传至云盘开放下载。
+
+
+参考项目：[https://github.com/JabinPeng/ThreeWeb]
 
