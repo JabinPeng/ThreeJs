@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tweenjs/tween.js": "^17.2.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "echarts": "^4.2.0-rc.2",
     "latest-createjs": "^1.0.24",
     "three": "^0.125.0",
